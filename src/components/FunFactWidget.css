@@ -1,0 +1,159 @@
+.close-fact-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  background: transparent;
+  color: #bbb;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+.close-fact-btn:hover, .close-fact-btn:focus {
+  color: #00FFD5;
+  outline: none;
+}
+
+.fun-fact-toggle-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(20, 20, 20, 0.98);
+  border: 1px solid #333;
+  border-radius: 50%;
+  color: #00FFD5;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.fun-fact-toggle-btn:hover, .fun-fact-toggle-btn:focus {
+  background: rgba(30, 30, 30, 0.98);
+  border-color: #00FFD5;
+  transform: scale(1.1);
+  outline: none;
+}
+
+.fun-fact-widget {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(20, 20, 20, 0.98);
+  color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  padding: 1.2rem 1.5rem 1rem 1.5rem;
+  min-width: 260px;
+  max-width: 340px;
+  z-index: 10000;
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  border: 1px solid #333;
+}
+
+.fun-fact-content {
+  width: 100%;
+}
+
+.fun-fact-type {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #00FFD5;
+  margin-bottom: 0.2rem;
+}
+
+.fun-fact-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.fun-fact-author {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin-top: 0.2rem;
+}
+
+.fun-fact-answer {
+  margin-top: 0.5rem;
+  font-size: 1.05rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+.reveal-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+.reveal-btn:hover, .reveal-btn:focus {
+  background: #000;
+  color: #fff;
+  outline: 2px solid #fff;
+}
+
+.next-fact-btn {
+  align-self: flex-end;
+  background: #00FFD5;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  transition: background 0.2s, color 0.2s;
+}
+.next-fact-btn:hover, .next-fact-btn:focus {
+  background: #111;
+  color: #00FFD5;
+  outline: 2px solid #00FFD5;
+}
+
+@media (max-width: 600px) {
+  .fun-fact-widget {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    min-width: 180px;
+    max-width: 95vw;
+    padding: 0.8rem 0.7rem 0.7rem 0.7rem;
+    font-size: 0.95rem;
+  }
+  .fun-fact-type, .fun-fact-text, .fun-fact-author, .fun-fact-answer {
+    font-size: 0.95rem;
+  }
+  .next-fact-btn, .reveal-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .fun-fact-toggle-btn {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+} 

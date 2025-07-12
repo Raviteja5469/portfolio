@@ -1,0 +1,57 @@
+.achievements-section {
+  padding: 4rem 2rem;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.achievements-title {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-shadow: none;
+  font-family: 'Space Mono', monospace;
+}
+
+.achievements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.achievement-card {
+  background: #111;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.achievement-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px #222;
+}
+
+.achievement-card h3 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.issuer, .date {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #bbb;
+  margin-bottom: 0.4rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+}

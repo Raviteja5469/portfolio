@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #39FF14;
+  --electric-blue: #00D4FF;
+  --cosmic-purple: #6B00FF;
+}
+
+body {
+  margin: 0;
+  background: black;
+  overflow-x: hidden;
+}

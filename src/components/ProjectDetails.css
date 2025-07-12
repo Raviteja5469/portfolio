@@ -1,0 +1,180 @@
+.project-detail-view {
+  padding: 5rem 3rem;
+  background: transparent;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Space Mono', monospace;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  background: #222;
+  border-color: #fff;
+  transform: translateX(-5px);
+}
+
+.project-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.project-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: none;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.project-content {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.project-description h3,
+.project-features h3,
+.project-technologies h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.project-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-features li {
+  padding: 0.5rem 0;
+  color: #ddd;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.project-features li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-item {
+  background: #111;
+  border: 1px solid #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  background: #222;
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.project-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.github-btn {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.github-btn:hover {
+  background: #222;
+  border-color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.demo-btn {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.demo-btn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .project-detail-view {
+    padding: 3rem 1.5rem;
+  }
+  
+  .project-header h2 {
+    font-size: 2rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

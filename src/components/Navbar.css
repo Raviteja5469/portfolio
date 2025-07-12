@@ -1,0 +1,81 @@
+/* Professional Slide-in Animation */
+@keyframes navbarSlide {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  box-sizing: border-box;
+  /* background: #111; */
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: navbarSlide 1s ease forwards;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Space Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: none;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.05rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.2s, border-bottom 0.2s;
+  position: relative;
+}
+
+.nav-links button:hover {
+  color: #111;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.nav-links button.active {
+  color: #111;
+  background: #fff;
+  border-radius: 4px;
+  border-bottom: 2px solid #111;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #000;
+}
+    

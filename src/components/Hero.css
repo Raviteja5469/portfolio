@@ -1,0 +1,644 @@
+.hero-container {
+  position: relative;
+  height: 110vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s ease-in;
+  /* border: 1px solid red; */
+}
+
+.gradient-overlay {
+  display: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6rem;
+  color: #fff;
+  animation: slideIn 1s ease-out;
+  width: 100%;
+}
+
+.profile-section {
+  flex: 0 0 auto;
+}
+
+.profile-pic-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  border: 6px solid #fff;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #222;
+}
+
+.profile-pic-wrapper::before {
+  display: none;
+}
+
+.intro {
+  flex: 1;
+  text-align: left;
+}
+
+.greeting {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow: none;
+  transition: none;
+}
+
+.greeting:hover {
+  text-shadow: none;
+}
+
+.bio-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.bio-list li {
+  margin: 0.8rem 0;
+  padding: 0.6rem 1.2rem;
+  background: #111;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio-list li:hover {
+  background: #222;
+  transform: translateX(12px);
+  box-shadow: 0 0 12px #111;
+}
+
+.location {
+  font-size: 1rem;
+  color: #bbb;
+  margin: 1.5rem 0;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tech-icons img {
+  width: 45px;
+  height: 45px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.tech-icons img:hover {
+  transform: translateY(-6px) rotate(3deg);
+  filter: brightness(1.2);
+}
+
+.social-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-row a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  background: #111;
+  letter-spacing: 0.5px;
+}
+
+.social-row a:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 15px #222;
+  transform: translateY(-3px);
+}
+
+/* Typewriter effect */
+.typewriter {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+.typewriter-cursor {
+  display: inline-block;
+  width: 1ch;
+  color: #bbb;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Animated greeting */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animated profile image */
+.pop-in {
+  opacity: 0;
+  transform: scale(0.85);
+  animation: popIn 0.7s 0.2s cubic-bezier(0.23, 1.02, 0.32, 1) forwards;
+}
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Tech icon tooltips */
+.tech-icon-tooltip {
+  position: relative;
+  display: inline-block;
+  margin: 0 0.4rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+}
+.tech-icon-tooltip:focus,
+.tech-icon-tooltip:hover {
+  color: #bbb;
+}
+.tech-icon-tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: max-content;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.3rem 0.7rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.tech-icon-tooltip:focus .tooltip-text,
+.tech-icon-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CTA Button */
+.cta-btn {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
+}
+.cta-btn:hover, .cta-btn:focus {
+  background: #000;
+  color: #fff;
+  outline: 2px solid #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Shooting Stars Background */
+.shooting-stars-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #fff, 0 0 8px #fff;
+  animation: shooting-star 3s linear infinite;
+}
+
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+  transform: translate(-50%, -50%);
+}
+
+.star-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+
+.star-2 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0.5s;
+  animation-duration: 3.5s;
+}
+
+.star-3 {
+  top: 30%;
+  left: 30%;
+  animation-delay: 1s;
+  animation-duration: 4.5s;
+}
+
+.star-4 {
+  top: 40%;
+  left: 40%;
+  animation-delay: 1.5s;
+  animation-duration: 3s;
+}
+
+.star-5 {
+  top: 50%;
+  left: 50%;
+  animation-delay: 2s;
+  animation-duration: 4s;
+}
+
+.star-6 {
+  top: 60%;
+  left: 60%;
+  animation-delay: 2.5s;
+  animation-duration: 3.5s;
+}
+
+.star-7 {
+  top: 70%;
+  left: 70%;
+  animation-delay: 3s;
+  animation-duration: 4.5s;
+}
+
+.star-8 {
+  top: 80%;
+  left: 80%;
+  animation-delay: 3.5s;
+  animation-duration: 3s;
+}
+
+.star-9 {
+  top: 90%;
+  left: 90%;
+  animation-delay: 4s;
+  animation-duration: 4s;
+}
+
+.star-10 {
+  top: 15%;
+  left: 15%;
+  animation-delay: 4.5s;
+  animation-duration: 3.5s;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200px) translateY(200px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .hero-content {
+    gap: 8rem;
+    padding: 3rem 2rem;
+  }
+  
+  .profile-pic-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .greeting {
+    font-size: 3rem;
+  }
+  
+  .typewriter {
+    font-size: 1.4rem;
+  }
+  
+  .bio-list {
+    font-size: 1.2rem;
+  }
+}
+
+/* Medium Desktop */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-content {
+    gap: 5rem;
+    padding: 2.5rem 2rem;
+  }
+  
+  .profile-pic-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .greeting {
+    font-size: 2.3rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) and (min-width: 769px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .profile-pic-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .greeting {
+    font-size: 2.2rem;
+  }
+
+  .bio-list {
+    font-size: 1.1rem;
+  }
+
+  .bio-list li {
+    padding: 0.6rem 1rem;
+  }
+
+  .location {
+    font-size: 1rem;
+  }
+
+  .tech-icons {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-row {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .typewriter {
+    justify-content: center;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .profile-pic-wrapper {
+    width: 220px;
+    height: 220px;
+  }
+
+  .greeting {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .typewriter {
+    font-size: 1.1rem;
+    justify-content: center;
+  }
+
+  .bio-list {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .bio-list li {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .location {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .tech-icons {
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .tech-icon-tooltip {
+    font-size: 1.8rem;
+  }
+
+  .social-row {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-row a {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .cta-btn {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .hero-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem 0;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  .profile-pic-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .greeting {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    justify-content: center;
+    min-height: 1.5rem;
+  }
+
+  .bio-list {
+    font-size: 0.9rem;
+    margin: 0.8rem 0;
+  }
+
+  .bio-list li {
+    padding: 0.4rem 0.8rem;
+    margin: 0.4rem 0;
+  }
+
+  .location {
+    font-size: 0.85rem;
+    margin: 0.8rem 0;
+  }
+
+  .tech-icons {
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  
+  .tech-icon-tooltip {
+    font-size: 1.6rem;
+    margin: 0 0.3rem;
+  }
+
+  .social-row {
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+  
+  .social-row a {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  
+  .cta-btn {
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Hide tooltips on very small screens */
+  .tech-icon-tooltip .tooltip-text {
+    display: none;
+  }
+}

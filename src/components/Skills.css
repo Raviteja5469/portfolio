@@ -1,0 +1,97 @@
+.module-section {
+  padding: 5rem 2rem;
+  /* background: #000; */
+  color: #fff;
+  text-align: center;
+  min-height: 15vh;
+}
+
+.module-title {
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  text-shadow: none;
+}
+
+.module-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 300px;
+  min-height: 150px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: none;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #222;
+}
+
+.skill-card.active {
+  background: #222;
+  box-shadow: 0 0 24px #222;
+}
+
+.skill-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.skill-details.expand {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.skill-details span {
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: #000;
+  text-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.skill-details span:hover {
+  background: #eee;
+  color: #111;
+  box-shadow: 0 0 10px #222;
+}
+
+.skill-quote {
+  font-size: 0.9rem;
+  color: #bbb;
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  text-shadow: none;
+}
+

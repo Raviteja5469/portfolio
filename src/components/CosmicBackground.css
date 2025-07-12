@@ -1,0 +1,49 @@
+/* Ensure the gradient overlay is subtle and enhances the cosmic effect */
+.bg-gradient-to-br {
+    background: linear-gradient(135deg, rgba(128, 0, 128, 0.25), transparent, rgba(0, 0, 255, 0.25));
+  }
+
+  .cosmic-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+/* Responsive adjustments for cosmic background */
+@media (max-width: 1200px) {
+  .cosmic-canvas {
+    /* Medium desktop - slightly reduced performance */
+  }
+}
+
+@media (max-width: 768px) {
+  .cosmic-canvas {
+    /* Tablet - optimized for touch devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .cosmic-canvas {
+    /* Mobile - minimal animations for better performance */
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cosmic-canvas {
+    /* Ensure crisp rendering on retina displays */
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-canvas {
+    /* Disable animations for accessibility */
+  }
+}
+  
