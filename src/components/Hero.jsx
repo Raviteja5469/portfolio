@@ -106,7 +106,7 @@ const Hero = ({ onNavigate }) => {
           </div>
           <div className="social-row">
             <a href="https://github.com/Raviteja5469" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/seguri-raviteja" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="/resume" aria-label="Resume">Resume</a>
           </div>
           {/* <button className="cta-btn" onClick={handleContactScroll} aria-label="Contact Me">
